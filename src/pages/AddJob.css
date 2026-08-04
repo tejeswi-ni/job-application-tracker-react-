@@ -1,0 +1,151 @@
+@media (max-width: 768px) {
+
+    .job-container {
+        padding: 20px 12px;
+    }
+
+    .job-container form {
+        padding: 20px;
+    }
+
+    .job-container h1 {
+        font-size: 1.6rem;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+}
+
+.job-container {
+    padding: 32px 20px;
+    background: linear-gradient(
+        180deg,
+        #eef2f7 0%,
+        #e5e7eb 100%
+    );
+    min-height: 100vh;
+}
+
+.job-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 24px;
+}
+
+.job-container form {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+}
+
+.job-container form:hover{
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 24px rgba(17,24,39,.08),
+        0 18px 40px rgba(17,24,39,.08),
+        inset 0 1px 0 rgba(255,255,255,.7);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 15px;
+    color: #111827;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #111827;
+    box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.15);
+}
+
+.add-job-button {
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.add-job-button:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(17, 24, 39, 0.25);
+}
+
+.add-job-button:active {
+    transform: translateY(1px);
+}
+ 
+.empty-state {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(12px);
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    box-shadow:
+        0 10px 30px rgba(17,24,39,.12),
+        inset 0 1px 0 rgba(255,255,255,.7);
+}
+
+.empty-state h2{
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.empty-state p{
+    color:#6b7280;
+}

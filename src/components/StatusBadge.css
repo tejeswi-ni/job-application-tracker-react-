@@ -1,0 +1,43 @@
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 14px;
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin: 12px 0;
+}
+
+/* Applied */
+.status-applied {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+/* Screening */
+.status-screening {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+/* Interview */
+.status-interview {
+    background: #df9637;
+    color: #3f470a;
+}
+
+/* Offer */
+.status-offer {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+/* Rejected */
+.status-rejected {
+    background: #fee2e2;
+    color: #dc2626;
+}
