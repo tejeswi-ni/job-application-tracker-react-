@@ -45,7 +45,7 @@ The application allows users to add, edit, delete, search, filter, and sort job 
 
 ### Dashboard
 
-*Add dashboard screenshot here.*
+![Dashboard](./public/screenshots/dashboard.png)
 
 ### Applications
 
