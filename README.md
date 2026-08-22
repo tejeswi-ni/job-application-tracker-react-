@@ -4,6 +4,8 @@ A responsive React application for tracking and managing job applications in one
 
 The application allows users to add, edit, delete, search, filter, and sort job applications while tracking their application status and progress.
 
+🚀 **Live Demo:** https://job-application-tracker-react-ptam-nine.vercel.app/
+
 ## 🚀 Features
 
 * Add new job applications
