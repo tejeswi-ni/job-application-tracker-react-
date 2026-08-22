@@ -1,16 +1,156 @@
-# React + Vite
+# Job Application Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application for tracking and managing job applications in one place.
 
-Currently, two official plugins are available:
+The application allows users to add, edit, delete, search, filter, and sort job applications while tracking their application status and progress.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* Add new job applications
+* Edit existing applications
+* Delete applications
+* Search applications by:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  * Company
+  * Job role
+  * Location
+* Filter applications by status
+* Sort applications by:
 
-## Expanding the ESLint configuration
+  * Newest
+  * Oldest
+  * Company A-Z
+  * Company Z-A
+* View detailed information about each application
+* Track application progress
+* Dashboard with application statistics
+* Persist application data using `localStorage`
+* Form validation for required fields
+* Empty states for situations with no applications or matching results
+* Handling for missing job applications
+* Handling for missing job links
+* Responsive design for desktop and mobile devices
+* Dark and light mode
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* **React** — UI development
+* **Vite** — Development and build tool
+* **JavaScript** — Application logic
+* **React Router** — Client-side routing
+* **CSS** — Styling and responsive layouts
+* **localStorage** — Client-side data persistence
+
+## 📸 Screenshots
+
+### Dashboard
+
+*Add dashboard screenshot here.*
+
+### Applications
+
+*Add applications page screenshot here.*
+
+### Add Job
+
+*Add add-job screenshot here.*
+
+### Job Details
+
+*Add job-details screenshot here.*
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── JobCard.jsx
+│   ├── Navbar.jsx
+│   ├── StatusBadge.jsx
+│   └── StatusProgress.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Applications.jsx
+│   ├── AddJob.jsx
+│   └── JobDetails.jsx
+│
+├── App.jsx
+├── main.jsx
+└── ...
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/tejeswi-ni/job-application-tracker-react-.git
+```
+
+Navigate into the project:
+
+```bash
+cd job-tracker
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+## ▶️ Running the Project
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local development URL shown in the terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## 💾 Data Persistence
+
+Job application data is stored in the browser using `localStorage`.
+
+This means applications remain available after refreshing the page or restarting the development server.
+
+The data is stored locally in the user's browser and is not connected to a backend database.
+
+## 🎯 Project Goals
+
+This project was built to practice and demonstrate:
+
+* React component development
+* State management with React Hooks
+* Form handling and validation
+* Conditional rendering
+* React Router
+* CRUD operations
+* Searching, filtering, and sorting
+* Browser `localStorage`
+* Responsive UI design
+* Handling real-world empty and error states
+
+## 🔮 Future Improvements
+
+Possible future improvements include:
+
+* Backend database integration
+* User authentication
+* Cloud data synchronization
+* Application deadline reminders
+* Advanced analytics
+* Export applications to CSV
+* Pagination for large application lists
+
+## 👩‍💻 Author
+
+**Tejeswini**
+
+Built as a React project to practice frontend development and build a practical application for managing job applications.
