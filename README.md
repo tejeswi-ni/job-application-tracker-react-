@@ -49,7 +49,7 @@ The application allows users to add, edit, delete, search, filter, and sort job 
 
 ### Applications
 
-*Add applications page screenshot here.*
+![Applications](./public/screenshots/applications.png)
 
 ### Add Job
 
