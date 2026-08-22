@@ -57,7 +57,7 @@ The application allows users to add, edit, delete, search, filter, and sort job 
 
 ### Job Details
 
-*Add job-details screenshot here.*
+![JobDetails](./public/screenshots/jobdetails%20.png)
 
 ## 📂 Project Structure
 
