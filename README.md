@@ -53,7 +53,7 @@ The application allows users to add, edit, delete, search, filter, and sort job 
 
 ### Add Job
 
-*Add add-job screenshot here.*
+![AddJob](./public/screenshots/addjob.png)
 
 ### Job Details
 
