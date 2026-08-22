@@ -1,0 +1,258 @@
+.job-details-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        180deg,
+        #f8fafc 0%,
+        #e5e7eb 100%
+    );
+
+    transition: background 0.3s ease;
+}
+
+/* =========================
+   DARK MODE CONTAINER
+   ========================= */
+
+body.dark .job-details-container {
+    background: linear-gradient(
+        180deg,
+        #111827 0%,
+        #0f172a 100%
+    );
+}
+
+/* =========================
+   DETAILS CARD
+   ========================= */
+
+.job-details-card {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 35px;
+
+    background: #ffffff;
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+body.dark .job-details-card {
+    background: #1f2937;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   TITLE
+   ========================= */
+
+.job-details-title {
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: #374151;
+
+    transition: color 0.3s ease;
+}
+
+body.dark .job-details-title {
+    color: #f9fafb;
+}
+
+/* =========================
+   JOB TITLE
+   ========================= */
+
+.job-details-card h2 {
+    font-size: 28px;
+
+    color: #1f2937;
+
+    margin-bottom: 25px;
+
+    transition: color 0.3s ease;
+}
+
+body.dark .job-details-card h2 {
+    color: #ffffff;
+}
+
+/* =========================
+   JOB DETAILS
+   ========================= */
+
+.job-detail {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #4b5563;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+body.dark .job-detail {
+    border-bottom-color: #374151;
+    color: #d1d5db;
+}
+
+.job-detail strong {
+    color: #374151;
+}
+
+body.dark .job-detail strong {
+    color: #f3f4f6;
+}
+
+/* =========================
+   NOTES
+   ========================= */
+
+.job-notes {
+    margin-top: 25px;
+}
+
+.job-notes strong {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #374151;
+}
+
+body.dark .job-notes strong {
+    color: #f3f4f6;
+}
+
+.job-notes p {
+    background: #f9fafb;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    line-height: 1.6;
+
+    color: #4b5563;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+body.dark .job-notes p {
+    background: #111827;
+    color: #d1d5db;
+}
+
+/* =========================
+   JOB LINK
+   ========================= */
+
+.job-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.job-link:hover {
+    text-decoration: underline;
+}
+
+body.dark .job-link {
+    color: #60a5fa;
+}
+
+/* =========================
+   ACTIONS
+   ========================= */
+
+.job-details-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 30px;
+}
+
+/* =========================
+   EDIT BUTTON
+   ========================= */
+
+.details-edit-button {
+    border: none;
+
+    padding: 11px 22px;
+
+    border-radius: 8px;
+
+    background: #374151;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.details-edit-button:hover {
+    background: #1f2937;
+    transform: translateY(-1px);
+}
+
+body.dark .details-edit-button {
+    background: #4b5563;
+}
+
+body.dark .details-edit-button:hover {
+    background: #6b7280;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .job-details-container {
+        padding: 24px 16px;
+    }
+
+    .job-details-card {
+        margin: 20px auto;
+        padding: 24px;
+    }
+
+    .job-details-card h2 {
+        font-size: 24px;
+    }
+
+    .job-detail {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .job-details-actions {
+        justify-content: center;
+    }
+
+    .details-edit-button {
+        width: 100%;
+    }
+}

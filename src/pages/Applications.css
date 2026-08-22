@@ -1,0 +1,239 @@
+.applications-container {
+    min-height: 100vh;
+    padding: 32px 20px;
+
+    background: linear-gradient(
+        180deg,
+        #f8fafc 0%,
+        #e5e7eb 100%
+    );
+
+    transition: background 0.3s ease;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+
+body.dark .applications-container {
+    background: linear-gradient(
+        180deg,
+        #111827 0%,
+        #0f172a 100%
+    );
+}
+
+/* =========================
+   TITLE
+   ========================= */
+
+.applications-title {
+    max-width: 1200px;
+    margin: 0 auto 25px;
+
+    color: #374151;
+    font-size: 2rem;
+
+    transition: color 0.3s ease;
+}
+
+body.dark .applications-title {
+    color: #f9fafb;
+}
+
+/* =========================
+   CONTROLS
+   ========================= */
+
+.application-controls {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+
+    align-items: end;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.control-group label {
+    font-weight: 600;
+    color: #374151;
+
+    transition: color 0.3s ease;
+}
+
+body.dark .control-group label {
+    color: #d1d5db;
+}
+
+/* =========================
+   INPUTS & SELECT
+   ========================= */
+
+.control-group input,
+.control-group select {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #374151;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.2s ease;
+}
+
+.control-group input:focus,
+.control-group select:focus {
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 0 2px rgba(96, 165, 250, 0.15);
+}
+
+/* Dark inputs */
+
+body.dark .control-group input,
+body.dark .control-group select {
+    background: #1f2937;
+    color: #f9fafb;
+    border-color: #4b5563;
+}
+
+body.dark .control-group input::placeholder {
+    color: #9ca3af;
+}
+
+body.dark .control-group input:focus,
+body.dark .control-group select:focus {
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+.applications-list {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.empty-state {
+    max-width: 600px;
+    margin: 80px auto;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.empty-state h2 {
+    color: #374151;
+}
+
+.empty-state p {
+    color: #6b7280;
+}
+
+/* Dark empty state */
+
+body.dark .empty-state {
+    background: #1f2937;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .empty-state h2 {
+    color: #f9fafb;
+}
+
+body.dark .empty-state p {
+    color: #9ca3af;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+    .application-controls {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-group {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .applications-container {
+        padding: 24px 16px;
+    }
+
+    .applications-title {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+
+    .application-controls {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .search-group {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+
+    .control-group input,
+    .control-group select {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .applications-list {
+        gap: 16px;
+    }
+
+    .empty-state {
+        margin: 50px auto;
+        padding: 30px 16px;
+    }
+}

@@ -1,30 +1,72 @@
 import "./JobCard.css";
-import React from 'react'
-import StatusBadge from './StatusBadge';
-import { FiEdit, FiTrash2,FiBriefcase,
-  FiMapPin } from "react-icons/fi";
-function JobCard({job, deleteJob, editJob}) {
-  return (
-    <div className='job-card'>
-        <h3> {job.company} </h3>
-        <p> <FiBriefcase/>
-          <strong>Role:</strong> {job.role} 
-        </p>
-        <p> <FiMapPin/>
-          <strong>Location: </strong>{job.location} 
-        </p>
-        <StatusBadge status = {job.status}/>
+import { useNavigate } from "react-router-dom";
+import StatusBadge from "./StatusBadge";
+import {
+    FiEdit,
+    FiTrash2,
+    FiBriefcase,
+    FiMapPin,
+} from "react-icons/fi";
+import StatusProgress from "./StatusProgress.jsx";
 
-        <div className="job-actions">
-          <button className='delete-button' 
-            onClick={() => deleteJob(job.id)}>
-              <FiTrash2/> Delete</button>
+function JobCard({ job, deleteJob, editJob }) {
+    const navigate = useNavigate();
 
-        <button  className='edit-button'
-        onClick={() => editJob(job.id)} > <FiEdit/>Edit</button>
+    return (
+        <div className={`job-card ${job.status.toLowerCase()}`}
+            onClick={() => navigate(`/applications/${job.id}`)}
+        >
+
+            <h3>{job.company}</h3>
+
+            <p>
+                <FiBriefcase />
+                <strong>Role:</strong> {job.role}
+            </p>
+
+            <p>
+                <FiMapPin />
+                <strong>Location:</strong> {job.location}
+            </p>
+
+            <p>
+                <strong>Date Applied:</strong> {job.dateApplied}
+            </p>
+
+            <StatusBadge status={job.status} />
+
+            <StatusProgress status={job.status} />
+
+            <div className="job-actions">
+
+                <button
+                    type="button"
+                    className="delete-button"
+                    onClick={(e) =>{
+                        e.stopPropagation();
+                        deleteJob(job.id)
+                    } }
+                >
+                    <FiTrash2 />
+                    Delete
+                </button>
+
+                <button
+                    type="button"
+                    className="edit-button"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        editJob(job.id)
+                    } }
+                >
+                    <FiEdit />
+                    Edit
+                </button>
+
+            </div>
+
         </div>
-    </div>
-  )
+    );
 }
 
-export default JobCard
+export default JobCard;

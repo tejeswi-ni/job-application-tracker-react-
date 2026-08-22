@@ -1,0 +1,115 @@
+.stage-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.status-progress-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.rejected-badge {
+    margin-top: 12px;
+    color: #dc2626;
+    font-weight: 600;
+    text-align: center;
+}
+.status-progress {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.active .circle {
+    background-color: #111827;
+    border-color: #111827;
+}
+
+.line {
+    flex: 1;
+    height: 5px;
+    background-color: #d1d5db;
+    margin: 0 8px;
+}
+
+.active-line {
+    background-color: #111827;
+}
+
+.stage p {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    text-align: center;
+}
+
+.active p {
+    color: #111827;
+    font-weight: 600;
+}
+
+.rejected-badge {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: #fee2e2;
+    color: #b91c1c;
+    border-radius: 20px;
+    align-self: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+    .status-progress {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .stage {
+        min-width: 65px;
+    }
+
+    .circle {
+        width: 14px;
+        height: 14px;
+    }
+
+    .line {
+        min-width: 20px;
+        height: 4px;
+        margin: 0 5px;
+    }
+
+    .stage p {
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+
+    .rejected-badge {
+        font-size: 0.8rem;
+        padding: 7px 10px;
+    }
+}

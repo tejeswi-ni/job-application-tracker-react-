@@ -1,0 +1,192 @@
+.stat-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+
+    padding: 24px;
+
+    flex: 1;
+    min-width: 180px;
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-shadow:
+        0 8px 24px rgba(17, 24, 39, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* =========================
+   HOVER
+   ========================= */
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    border-top-width: 6px;
+
+    box-shadow:
+        0 12px 28px rgba(17, 24, 39, 0.12),
+        0 18px 40px rgba(17, 24, 39, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* =========================
+   TITLE
+   ========================= */
+
+.stat-title {
+    margin: 0;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #6b7280;
+
+    transition: color 0.3s ease;
+}
+
+/* =========================
+   COUNT
+   ========================= */
+
+.stat-count {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-top: 18px;
+}
+
+/* =========================
+   CARD ACCENTS
+   ========================= */
+
+.total-card {
+    border-top: 4px solid #111827;
+}
+
+.total-card .stat-count {
+    color: #111827;
+}
+
+.applied-card {
+    border-top: 4px solid #374151;
+}
+
+.applied-card .stat-count {
+    color: #374151;
+}
+
+.interview-card {
+    border-top: 4px solid #4b5563;
+}
+
+.interview-card .stat-count {
+    color: #4b5563;
+}
+
+.screening-card {
+    border-top: 4px solid #6b7280;
+}
+
+.screening-card .stat-count {
+    color: #6b7280;
+}
+
+.offer-card {
+    border-top: 4px solid #16a34a;
+}
+
+.offer-card .stat-count {
+    color: #16a34a;
+}
+
+.rejected-card {
+    border-top: 4px solid #dc2626;
+}
+
+.rejected-card .stat-count {
+    color: #dc2626;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+
+body.dark .stat-card {
+    background: rgba(31, 41, 55, 0.95);
+    border-color: #374151;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .stat-card:hover {
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.4),
+        0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .stat-title {
+    color: #9ca3af;
+}
+
+/* Dark mode count colors */
+
+body.dark .total-card .stat-count {
+    color: #f9fafb;
+}
+
+body.dark .applied-card .stat-count {
+    color: #d1d5db;
+}
+
+body.dark .interview-card .stat-count {
+    color: #c4b5fd;
+}
+
+body.dark .screening-card .stat-count {
+    color: #93c5fd;
+}
+
+body.dark .offer-card .stat-count {
+    color: #4ade80;
+}
+
+body.dark .rejected-card .stat-count {
+    color: #f87171;
+}
+
+/* =========================
+   DARK MODE ACCENTS
+   ========================= */
+
+body.dark .total-card {
+    border-top-color: #f9fafb;
+}
+
+body.dark .applied-card {
+    border-top-color: #9ca3af;
+}
+
+body.dark .interview-card {
+    border-top-color: #8b5cf6;
+}
+
+body.dark .screening-card {
+    border-top-color: #60a5fa;
+}
+
+body.dark .offer-card {
+    border-top-color: #22c55e;
+}
+
+body.dark .rejected-card {
+    border-top-color: #ef4444;
+}

@@ -1,0 +1,114 @@
+.dashboard-container {
+    padding: 32px 20px;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #f8fafc 0%,
+        #e5e7eb 100%
+    );
+
+    transition: background 0.3s ease;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+
+body.dark .dashboard-container {
+    background: linear-gradient(
+        180deg,
+        #111827 0%,
+        #0f172a 100%
+    );
+}
+
+/* =========================
+   DASHBOARD TITLE
+   ========================= */
+
+.dashboard-title {
+    position: sticky;
+    top: 160px;
+
+    color: #374151;
+    background: rgba(248, 250, 252, 0.95);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 100;
+
+    padding: 16px 0;
+    margin-bottom: 30px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+body.dark .dashboard-title {
+    color: #f9fafb;
+    background: rgba(17, 24, 39, 0.95);
+}
+
+/* =========================
+   STATS
+   ========================= */
+
+.stats-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* =========================
+   WIDE CARD
+   ========================= */
+
+.wide-card {
+    grid-column: span 2;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 992px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wide-card {
+        grid-column: span 2;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .dashboard-container {
+        padding: 24px 16px;
+    }
+
+    .dashboard-title {
+        font-size: 1.7rem;
+        top: 230px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .wide-card {
+        grid-column: span 1;
+    }
+}

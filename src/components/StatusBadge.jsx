@@ -1,4 +1,3 @@
-import React from "react";
 import "./StatusBadge.css";
 
 import {
@@ -33,7 +32,9 @@ function StatusBadge({ status }) {
     },
   };
 
-  const current = statusConfig[status];
+  const current = statusConfig[status] || {
+    className: "", icon: null,
+  };
 
   return (
     <span className={`status-badge ${current.className}`}>

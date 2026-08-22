@@ -1,60 +1,110 @@
-@media (max-width: 768px) {
-
-    .job-container {
-        padding: 20px 12px;
-    }
-
-    .job-container form {
-        padding: 20px;
-    }
-
-    .job-container h1 {
-        font-size: 1.6rem;
-    }
-
-    input,
-    select,
-    textarea {
-        width: 100%;
-    }
-}
-
 .job-container {
     padding: 32px 20px;
+    min-height: 100vh;
+
     background: linear-gradient(
         180deg,
-        #eef2f7 0%,
+        #f8fafc 0%,
         #e5e7eb 100%
     );
-    min-height: 100vh;
+
+    transition: background 0.3s ease;
 }
+
+.error-message {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* =========================
+   DARK MODE CONTAINER
+   ========================= */
+
+body.dark .job-container {
+    background: linear-gradient(
+        180deg,
+        #111827 0%,
+        #0f172a 100%
+    );
+}
+
+/* =========================
+   TITLE
+   ========================= */
 
 .job-container h1 {
     text-align: center;
+
     font-size: 2rem;
     font-weight: 700;
+
     color: #111827;
+
     margin-bottom: 24px;
+
+    transition: color 0.3s ease;
 }
+
+body.dark .job-container h1 {
+    color: #f9fafb;
+}
+
+/* =========================
+   FORM
+   ========================= */
 
 .job-container form {
     max-width: 750px;
     margin: 0 auto;
+
     padding: 32px;
+
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    transition: transform .3s ease,
-                box-shadow .3s ease;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    box-shadow:
+        0 8px 24px rgba(17, 24, 39, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
-.job-container form:hover{
+.job-container form:hover {
     transform: translateY(-3px);
+
     box-shadow:
-        0 8px 24px rgba(17,24,39,.08),
-        0 18px 40px rgba(17,24,39,.08),
-        inset 0 1px 0 rgba(255,255,255,.7);
+        0 8px 24px rgba(17, 24, 39, 0.08),
+        0 18px 40px rgba(17, 24, 39, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
+
+/* =========================
+   DARK MODE FORM
+   ========================= */
+
+body.dark .job-container form {
+    background: rgba(31, 41, 55, 0.95);
+    border-color: #374151;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .job-container form:hover {
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   FORM GROUP
+   ========================= */
 
 .form-group {
     margin-bottom: 22px;
@@ -62,24 +112,48 @@
 
 .form-group label {
     display: block;
+
     margin-bottom: 8px;
+
     font-size: 15px;
     font-weight: 600;
+
     color: #374151;
+
+    transition: color 0.3s ease;
 }
+
+body.dark .form-group label {
+    color: #d1d5db;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
 
 input,
 select,
 textarea {
     width: 100%;
+    box-sizing: border-box;
+
     padding: 13px 16px;
+
     font-size: 15px;
+
     color: #111827;
     background: #ffffff;
+
     border: 1px solid #d1d5db;
     border-radius: 10px;
-    transition: all 0.25s ease;
-    box-sizing: border-box;
+
+    outline: none;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 textarea {
@@ -92,60 +166,214 @@ textarea::placeholder {
     color: #9ca3af;
 }
 
+/* =========================
+   INPUT FOCUS
+   ========================= */
+
 input:focus,
 select:focus,
 textarea:focus {
-    outline: none;
     border-color: #111827;
-    box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.15);
+
+    box-shadow:
+        0 0 0 4px rgba(17, 24, 39, 0.15);
 }
+
+/* =========================
+   DARK MODE INPUTS
+   ========================= */
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    color: #f9fafb;
+    background: #111827;
+
+    border-color: #4b5563;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+    color: #6b7280;
+}
+
+body.dark input:focus,
+body.dark select:focus,
+body.dark textarea:focus {
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 0 4px rgba(96, 165, 250, 0.15);
+}
+
+/* =========================
+   ADD JOB BUTTON
+   ========================= */
 
 .add-job-button {
     background: #111827;
     color: white;
+
     border: none;
     padding: 12px 22px;
+
     border-radius: 12px;
+
     font-size: 15px;
     font-weight: 600;
+
     cursor: pointer;
-    transition: all 0.25s ease;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .add-job-button:hover {
     background: #1f2937;
+
     transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(17, 24, 39, 0.25);
+
+    box-shadow:
+        0 8px 15px rgba(17, 24, 39, 0.25);
 }
 
 .add-job-button:active {
     transform: translateY(1px);
 }
- 
+
+/* =========================
+   EMPTY STATE
+   ========================= */
+
 .empty-state {
     max-width: 750px;
     margin: 40px auto;
+
     padding: 50px 30px;
 
     text-align: center;
 
-    background: rgba(255,255,255,.85);
+    background: rgba(255, 255, 255, 0.9);
+
     backdrop-filter: blur(12px);
 
     border-radius: 16px;
 
-    border: 1px solid rgba(255,255,255,.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 
     box-shadow:
-        0 10px 30px rgba(17,24,39,.12),
-        inset 0 1px 0 rgba(255,255,255,.7);
+        0 10px 30px rgba(17, 24, 39, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.empty-state h2{
-    color:#111827;
-    margin-bottom:10px;
+.empty-state h2 {
+    color: #111827;
+    margin-bottom: 10px;
 }
 
-.empty-state p{
-    color:#6b7280;
+.empty-state p {
+    color: #6b7280;
+}
+
+/* =========================
+   DARK MODE EMPTY STATE
+   ========================= */
+
+body.dark .empty-state {
+    background: rgba(31, 41, 55, 0.95);
+
+    border-color: #374151;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .empty-state h2 {
+    color: #f9fafb;
+}
+
+body.dark .empty-state p {
+    color: #9ca3af;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .job-container {
+        padding: 20px 12px;
+    }
+
+    .job-container form {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 20px 16px;
+    }
+
+    .job-container h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 13px 14px;
+        font-size: 16px;
+    }
+
+    .add-job-button {
+        width: 100%;
+        padding: 13px;
+    }
+
+    .empty-state {
+        margin: 30px auto;
+        padding: 35px 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 400px) {
+
+    .job-container {
+        padding: 16px 10px;
+    }
+
+    .job-container form {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+
+    .job-container h1 {
+        font-size: 1.45rem;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 12px;
+    }
 }

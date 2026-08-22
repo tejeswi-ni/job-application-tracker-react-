@@ -1,97 +1,267 @@
-@media (max-width: 768px) {
-
-    .job-card {
-        margin: 15px 0;
-        padding: 20px;
-    }
-
-    .job-actions {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-.job-card{
+.job-card {
     max-width: 750px;
     margin: 20px auto;
     padding: 24px;
-    background: rgba(255,255,255,0.85);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 16px;
+
     overflow-wrap: anywhere;
+
     box-shadow:
         0 10px 30px rgba(17, 24, 39, 0.12),
         inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
-    transition: all 0.25s ease;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+
+    cursor: pointer;
 }
 
-
+/* =========================
+   HOVER
+   ========================= */
 
 .job-card:hover {
     transform: translateY(-4px);
+
     box-shadow:
         0 16px 40px rgba(17, 24, 39, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
+/* =========================
+   TEXT
+   ========================= */
+
 .job-card h3 {
     margin-top: 0;
-    font-size: 1.4rem;
-    overflow-wrap: anywhere;
-    font-weight: 700;
-    color: #111827;
     margin-bottom: 12px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    color: #111827;
+
+    overflow-wrap: anywhere;
 }
 
 .job-card p {
-    font-size: 15px;
-    color: #111827;
-    overflow-wrap: anywhere;
     margin: 8px 0;
+
+    font-size: 15px;
     line-height: 1.5;
+
+    color: #374151;
+
+    overflow-wrap: anywhere;
 }
 
-.job-actions{
+/* =========================
+   ACTIONS
+   ========================= */
+
+.job-actions {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
+
     padding: 10px;
     margin-top: 10px;
+
     border-top: 1px solid #e5e7eb;
 }
 
+/* =========================
+   DELETE BUTTON
+   ========================= */
+
 .delete-button {
     padding: 10px 18px;
+
     border: none;
+    border-radius: 8px;
+
     background: #dc2626;
     color: white;
-    border-radius: 8px;
+
     font-size: 14px;
     font-weight: 600;
+
     cursor: pointer;
-    transition: all 0.25s ease;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .delete-button:hover {
     background: #b91c1c;
+
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(220, 38, 38, 0.25);
+
+    box-shadow:
+        0 8px 16px rgba(220, 38, 38, 0.25);
 }
+
+/* =========================
+   EDIT BUTTON
+   ========================= */
 
 .edit-button {
     padding: 10px 18px;
+
     border: 1px solid #d1d5db;
+    border-radius: 8px;
+
     background: #ffffff;
     color: #111827;
-    border-radius: 8px;
+
     font-size: 14px;
     font-weight: 600;
+
     cursor: pointer;
-    transition: all 0.25s ease;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
 }
 
 .edit-button:hover {
     background: #f3f4f6;
     transform: translateY(-2px);
+}
+
+
+.job-card.applied {
+    background-color: #e5e7eb;
+}
+
+.job-card.screening {
+    background-color: #bfdbfe;
+}
+
+.job-card.interview {
+    background-color: #ddd6fe;
+}
+
+.job-card.offer {
+    background-color: #bbf7d0;
+}
+
+.job-card.rejected {
+    background-color: #fecaca;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+
+body.dark .job-card {
+    background: #1f2937;
+    border-color: #374151;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .job-card:hover {
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+body.dark .job-card h3 {
+    color: #f9fafb;
+}
+
+body.dark .job-card p {
+    color: #d1d5db;
+}
+
+body.dark .job-actions {
+    border-top-color: #374151;
+}
+
+body.dark .edit-button {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+body.dark .edit-button:hover {
+    background: #4b5563;
+}
+
+body.dark .job-card.applied {
+    background-color: #374151;
+}
+
+body.dark .job-card.screening {
+    background-color: #1e3a5f;
+}
+
+body.dark .job-card.interview {
+    background-color: #3b315c;
+}
+
+body.dark .job-card.offer {
+    background-color: #14532d;
+}
+
+body.dark .job-card.rejected {
+    background-color: #7f1d1d;
+}
+
+@media (max-width: 768px) {
+
+    .job-card {
+        width: 100%;
+        box-sizing: border-box;
+
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    .job-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .job-card p {
+        font-size: 14px;
+    }
+
+    .job-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .edit-button,
+    .delete-button {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .job-card {
+        padding: 16px;
+    }
+
+    .job-actions {
+        flex-direction: column;
+    }
+
+    .edit-button,
+    .delete-button {
+        width: 100%;
+    }
 }
